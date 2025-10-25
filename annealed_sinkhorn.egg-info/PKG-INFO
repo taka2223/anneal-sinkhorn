@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: annealed-sinkhorn
+Version: 0.1.0
+Summary: Fast and flexible Annealed Sinkhorn algorithm for Optimal Transport
+Author-email: Your Name <your.email@example.com>
+Maintainer-email: Your Name <your.email@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/yourusername/annealed-sinkhorn
+Project-URL: Documentation, https://annealed-sinkhorn.readthedocs.io
+Project-URL: Repository, https://github.com/yourusername/annealed-sinkhorn
+Project-URL: Bug Tracker, https://github.com/yourusername/annealed-sinkhorn/issues
+Keywords: optimal-transport,sinkhorn,wasserstein,machine-learning,jax
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: jax>=0.4.0
+Requires-Dist: jaxlib>=0.4.0
+Requires-Dist: numpy>=1.20.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0; extra == "dev"
+Requires-Dist: black>=22.0; extra == "dev"
+Requires-Dist: isort>=5.0; extra == "dev"
+Requires-Dist: flake8>=5.0; extra == "dev"
+Requires-Dist: mypy>=0.990; extra == "dev"
+Provides-Extra: examples
+Requires-Dist: matplotlib>=3.5.0; extra == "examples"
+Requires-Dist: POT>=0.8.0; extra == "examples"
+Provides-Extra: docs
+Requires-Dist: sphinx>=5.0; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=1.0; extra == "docs"
+Provides-Extra: all
+Requires-Dist: annealed-sinkhorn[dev,docs,examples]; extra == "all"

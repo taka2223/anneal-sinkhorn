@@ -1,0 +1,96 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "annealed-sinkhorn"
+version = "0.1.0"
+description = "Fast and flexible Annealed Sinkhorn algorithm for Optimal Transport"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+maintainers = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+keywords = [
+    "optimal-transport",
+    "sinkhorn",
+    "wasserstein",
+    "machine-learning",
+    "jax"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+dependencies = [
+    "jax>=0.4.0",
+    "jaxlib>=0.4.0",
+    "numpy>=1.20.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=22.0",
+    "isort>=5.0",
+    "flake8>=5.0",
+    "mypy>=0.990",
+]
+examples = [
+    "matplotlib>=3.5.0",
+    "POT>=0.8.0",  # Python Optimal Transport
+]
+docs = [
+    "sphinx>=5.0",
+    "sphinx-rtd-theme>=1.0",
+]
+all = [
+    "annealed-sinkhorn[dev,examples,docs]"
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/annealed-sinkhorn"
+Documentation = "https://annealed-sinkhorn.readthedocs.io"
+Repository = "https://github.com/yourusername/annealed-sinkhorn"
+"Bug Tracker" = "https://github.com/yourusername/annealed-sinkhorn/issues"
+
+[tool.setuptools]
+packages = ["sinkhorn"]
+
+[tool.setuptools.package-data]
+sinkhorn = ["py.typed"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311']
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --cov=sinkhorn --cov-report=html --cov-report=term"

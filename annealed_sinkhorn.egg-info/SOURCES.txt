@@ -1,0 +1,11 @@
+pyproject.toml
+annealed_sinkhorn.egg-info/PKG-INFO
+annealed_sinkhorn.egg-info/SOURCES.txt
+annealed_sinkhorn.egg-info/dependency_links.txt
+annealed_sinkhorn.egg-info/requires.txt
+annealed_sinkhorn.egg-info/top_level.txt
+sinkhorn/__init__.py
+sinkhorn/core.py
+sinkhorn/metrics.py
+sinkhorn/schedule.py
+sinkhorn/utils.py
